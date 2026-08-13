@@ -1,54 +1,198 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MyLinks - Tu Nombre</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyLinks · Jafet Sánchez</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+  <!-- Tipografía Inter -->
+  <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)">
+  <link rel="preconnect" href="[fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+  <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap)" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles.css" />
+  <style>
+    :root {
+      --bg-principal: #F5F7FA;
+      --acento:       #6C63FF;
+      --texto:        #222222;
+      --borde:        #E1E5EC;
+      --card:         #FFFFFF;
+      --radio:        14px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-principal);
+      color: var(--texto);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 48px 20px;
+      line-height: 1.5;
+    }
+
+    .contenedor {
+      width: 100%;
+      max-width: 420px;
+    }
+
+    /* --- Cabecera del perfil --- */
+    .perfil {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background-color: var(--card);
+      border: 1px solid var(--borde);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--acento);
+    }
+
+    .perfil h1 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .perfil p {
+      font-size: 14px;
+      color: #555;
+      font-weight: 400;
+    }
+
+    /* --- Lista de enlaces --- */
+    .enlaces {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .enlace {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--card);
+      border: 1px solid var(--borde);
+      border-radius: var(--radio);
+      padding: 16px 20px;
+      text-decoration: none;
+      color: var(--texto);
+      font-size: 15px;
+      font-weight: 500;
+      transition: border-color 0.2s ease, transform 0.15s ease;
+    }
+
+    .enlace:hover {
+      border-color: var(--acento);
+      transform: translateY(-2px);
+    }
+
+    .enlace .texto {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .enlace .texto small {
+      font-size: 12px;
+      font-weight: 400;
+      color: #888;
+    }
+
+    .enlace .icono {
+      width: 26px;
+      height: 26px;
+      color: var(--acento);
+      flex-shrink: 0;
+    }
+
+    /* --- Pie --- */
+    footer {
+      text-align: center;
+      margin-top: 36px;
+      font-size: 12px;
+      color: #999;
+    }
+  </style>
 </head>
-
 <body>
+  <main class="contenedor">
 
-    <main class="card">
+    <!-- Perfil -->
+    <section class="perfil">
+      <div class="avatar">JS</div>
+      <h1>Jafet Sánchez</h1>
+      <p>Estudiante de Ingeniería de Software con Inteligencia Artificial</p>
+    </section>
 
-        <!-- FOTO DE PERFIL -->
-        <!-- Cambia "Tu Nombre" en el atributo alt -->
-        <img class="avatar" src="IMG_20231023_234457.jpg" alt="Foto de JAFET" width="100"
-            height="100" />
+    <!-- Enlaces -->
+    <nav class="enlaces">
 
-        <!-- NOMBRE Y BIO -->
-        <!-- Reemplaza el texto con tu información -->
-        <h1 class="name">JAFET SANCHEZ</h1>
-        <p class="bio">Desarrollador wed ,estudiante de desarrollo de sofware</p>
+      <a class="enlace" href="[linkedin.com](https://www.linkedin.com/)" target="_blank" rel="noopener">
+        <span class="texto">LinkedIn <small>Perfil profesional</small></span>
+        <svg class="icono" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.8-1.95 3.7-1.95 3.96 0 4.7 2.6 4.7 6V21h-4v-5.3c0-1.27-.02-2.9-1.77-2.9-1.77 0-2.04 1.38-2.04 2.8V21H9z"/>
+        </svg>
+      </a>
 
+      <a class="enlace" href="[github.com](https://github.com/)" target="_blank" rel="noopener">
+        <span class="texto">GitHub <small>Repositorios y código</small></span>
+        <svg class="icono" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/>
+        </svg>
+      </a>
 
-        <!-- ENLACES -->
-        <!-- Cambia el href y el texto de cada enlace -->
-        <!-- Puedes agregar o quitar enlaces según necesites como FACEBOOK,WHATTSAP,etc cualquier medio de contacto -->
-        <nav class="links">
+      <a class="enlace" href="https://" target="_blank" rel="noopener">
+        <span class="texto">Portfolio <small>Mis proyectos</small></span>
+        <svg class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="7" width="20" height="14" rx="2"/>
+          <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+        </svg>
+      </a>
 
-            <a href="https://github.com/jafet231003" class="link" target="_blank">
-                GitHub
-            </a>
+      <a class="enlace" href="mailto:jafetsanchez683@gmail.com">
+        <span class="texto">Email <small>jafetsanchez683@gmail.com</small></span>
+        <svg class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <path d="m2 6 10 7 10-7"/>
+        </svg>
+      </a>
 
-            <a href="mailto:tu@email.com" class="link">
-                Email
-            </a>
+      <a class="enlace" href="[instagram.com](https://www.instagram.com/)" target="_blank" rel="noopener">
+        <span class="texto">Instagram <small>Hobbies y día a día</small></span>
+        <svg class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+        </svg>
+      </a>
 
+      <a class="enlace" href="https://" target="_blank" rel="noopener">
+        <span class="texto">Otro enlace <small>Más información</small></span>
+        <svg class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/>
+          <path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/>
+        </svg>
+      </a>
 
+    </nav>
 
-        </nav>
-
-    </main>
-
+    <footer>© 2026 · MyLinks v2</footer>
+  </main>
 </body>
-
 </html>
