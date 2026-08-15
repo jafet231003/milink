@@ -50,19 +50,14 @@
     }
 
     .avatar {
-      width: 96px;
-      height: 96px;
-      border-radius: 50%;
-      background-color: var(--card);
-      border: 1px solid var(--borde);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 16px;
-      font-size: 34px;
-      font-weight: 700;
-      color: var(--acento);
-    }
+       width: 120px;
+       height: 120px;
+       border-radius: 50%;
+       border: 3px solid var(--acento);
+       object-fit: cover;
+       display: block;
+       margin: 0 auto 16px;
+}
 
     .perfil h1 {
       font-size: 22px;
@@ -128,6 +123,50 @@
       font-size: 12px;
       color: #999;
     }
+    /* --- Responsive para PC y tablets --- */
+@media (min-width: 768px) {
+
+  .contenedor {
+    max-width: 800px;
+  }
+
+  .avatar {
+    width: 160px;
+    height: 160px;
+  }
+
+  .perfil h1 {
+    font-size: 38px;
+  }
+
+  .perfil p {
+    font-size: 18px;
+  }
+
+  .enlaces {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+
+  .enlace {
+    padding: 20px 24px;
+    font-size: 18px;
+  }
+
+  .enlace .texto small {
+    font-size: 14px;
+  }
+
+  .enlace .icono {
+    width: 32px;
+    height: 32px;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+}
   </style>
 </head>
 <body>
@@ -135,7 +174,7 @@
 
     <!-- Perfil -->
     <section class="perfil">
-      <div class="avatar">JS</div>
+      <img src="IMG_20231023_234457.jpg" alt="Foto de Jafet" class="avatar">
       <h1>Jafet Sánchez</h1>
       <p>Estudiante de Ingeniería de Software con Inteligencia Artificial</p>
     </section>
